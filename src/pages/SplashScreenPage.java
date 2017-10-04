@@ -24,7 +24,7 @@ public class SplashScreenPage extends AbstractPage {
 		public static MobileElement descText;
 		
 		///Splash sign in text
-		@FindBy (xpath="//android.widget.TextView[@text='Sign in']\")")
+		@FindBy (id="splash_sign_in_text")
 		public static MobileElement signInText;
 		
 		///'Sign up with Email' button
