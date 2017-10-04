@@ -6,8 +6,9 @@ import org.testng.annotations.Test;
 
 import pages.EmailSignUpPage;
 import pages.SplashScreenPage;
+import utils.AbstractTest;
 
-public class VerifyUISignedOut {
+public class VerifyUISignedOut extends AbstractTest {
 	
 	//Splash screen
 	@Test (priority = 1)
