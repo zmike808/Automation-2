@@ -11,7 +11,7 @@ public class SplashScreenPage {
 	private static MobileElement closeBtn;
 	
 	@FindBy (id="")
-	Pull request test 2
+	Pull request test 3
 	private static MobileElement ;
 	
 	@FindBy (id="")
