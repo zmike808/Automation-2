@@ -23,6 +23,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(SplashScreenPage.signInText.isDisplayed());
 	}
 	
+	//Email Sign Up screen
 	@Test (priority = 2)
 	public static void VerifyEmailSignUpUI() throws InterruptedException {
 		SplashScreenPage.tapEmailSignUpBtn();
@@ -38,6 +39,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		Thread.sleep(1000);
 	}
 	
+	//Phone Sign Up screen (FacebookAccountKitPage1)
 	@Test (priority = 3)
 	public static void VerifyPhoneSignUpUI() throws InterruptedException {
 		SplashScreenPage.tapPhoneSignUpBtn();
