@@ -10,6 +10,21 @@ public class SplashScreenPage {
 	@FindBy (id="do_it_later_button")
 	private static MobileElement closeBtn;
 	
+	@FindBy (id="")
+	Pull request test 2
+	private static MobileElement ;
+	
+	@FindBy (id="")
+	private static MobileElement ;
+	
+	@FindBy (id="")
+	private static MobileElement ;
+	
+	@FindBy (id="")
+	private static MobileElement ;
+	
+	@FindBy (id="")
+	private static MobileElement ;
 	
 	//Methods
 	
