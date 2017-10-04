@@ -4,7 +4,9 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.android.AndroidKeyCode;
 import pages.EmailSignUpPage;
+import pages.FacebookAccountKitPage1;
 import pages.SplashScreenPage;
 import utils.AbstractTest;
 
@@ -34,6 +36,19 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(EmailSignUpPage.signUpBtn.isDisplayed());
 		EmailSignUpPage.tapBackBtn();
 		Thread.sleep(1000);
+	}
+	
+	@Test (priority = 3)
+	public static void VerifyPhoneSignUpUI() throws InterruptedException {
+		SplashScreenPage.tapPhoneSignUpBtn();
+		Thread.sleep(1000);
+		Assert.assertTrue(FacebookAccountKitPage1.enterYourPhoneText.isDisplayed());
+		Assert.assertTrue(FacebookAccountKitPage1.phoneNumberField.isDisplayed());
+		Assert.assertTrue(FacebookAccountKitPage1.countryCodeBtn.isDisplayed());
+		Assert.assertTrue(FacebookAccountKitPage1.descriptiveText.isDisplayed());
+		Assert.assertTrue(FacebookAccountKitPage1.nextBtn.isDisplayed());
+		driver.pressKeyCode(AndroidKeyCode.BACK);
+		driver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 
 }
