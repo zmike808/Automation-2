@@ -49,6 +49,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(FacebookAccountKitPage1.nextBtn.isDisplayed());
 		driver.pressKeyCode(AndroidKeyCode.BACK);
 		driver.pressKeyCode(AndroidKeyCode.BACK);
+		Thread.sleep(1000);
 	}
 
 }
