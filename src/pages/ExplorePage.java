@@ -15,7 +15,7 @@ public class ExplorePage extends AbstractPage {
 		public static MobileElement searchBtn;
 		
 		//'Settings' button 
-		@FindBy (id="com.vsco.cam:id/header_right_button")
+		@FindBy (id="header_right_button")
 		public static MobileElement settingsBtn;
 		
 		//'Follow - find your friends to connect' text
