@@ -9,6 +9,7 @@ import pages.EmailSignUpPage;
 import pages.ExplorePage;
 import pages.FacebookAccountKitPage1;
 import pages.SearchPage;
+import pages.SettingsPage;
 import pages.SignInPage;
 import pages.SplashScreenPage;
 import pages.XUpsellPage;
@@ -121,6 +122,25 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(SearchPage.suggestedUserTitle.isDisplayed());
 		Assert.assertTrue(SearchPage.suggestedUserDisplayLabel.isDisplayed());
 		Assert.assertTrue(SearchPage.suggestedUserFollowBtn.isDisplayed());
-		SearchPage.tapCloseBtn();		
+		SearchPage.tapCloseBtn();
+		Thread.sleep(1000);
+	}
+	
+	@Test (priority = 8)
+	public static void VerifySettingsUI() throws InterruptedException {
+		ExplorePage.tapSettingsBtn();
+		Thread.sleep(1000);
+		Assert.assertTrue(SettingsPage.closeBtn.isDisplayed());
+		Assert.assertTrue(SettingsPage.headerText.isDisplayed());
+		Assert.assertTrue(SettingsPage.xMembershipBtn.isDisplayed());
+		Assert.assertTrue(SettingsPage.aboutVSCOBtn.isDisplayed());
+		Assert.assertTrue(SettingsPage.preferenceBtn.isDisplayed());
+		Assert.assertTrue(SettingsPage.socialBtn.isDisplayed());
+		Assert.assertTrue(SettingsPage.privacyBtn.isDisplayed());
+		Assert.assertTrue(SettingsPage.licensingBtn.isDisplayed());
+		Assert.assertTrue(SettingsPage.supportBtn.isDisplayed());
+		Assert.assertTrue(SettingsPage.versionNumber.isDisplayed());
+		SettingsPage.TapCloseBtn();
+		Thread.sleep(1000);
 	}
 }

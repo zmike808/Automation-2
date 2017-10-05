@@ -8,7 +8,7 @@ import utils.AbstractPage;
 public class SearchPage extends AbstractPage {
 	
 	//Objects
-		//'Close' button (X0
+		//'Close' button (X)
 		@FindBy (id="search_close_button")
 		public static MobileElement closeBtn;
 		
