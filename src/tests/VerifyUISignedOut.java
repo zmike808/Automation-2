@@ -9,6 +9,7 @@ import pages.EmailSignUpPage;
 import pages.FacebookAccountKitPage1;
 import pages.SignInPage;
 import pages.SplashScreenPage;
+import pages.XUpsellPage;
 import utils.AbstractTest;
 
 public class VerifyUISignedOut extends AbstractTest {
@@ -83,6 +84,20 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(SignInPage.termsAndPolicyText.isDisplayed());
 		SignInPage.tapBackBtn();
 		Thread.sleep(1000);
+	}
+	
+	@Test (priority = 5)
+	public static void VerifyXUpsellUI() throws InterruptedException {
+		SplashScreenPage.tapCloseBtn();
+		Thread.sleep(1000);
+		Assert.assertTrue(XUpsellPage.closeBtn.isDisplayed());
+		Assert.assertTrue(XUpsellPage.skipBtn.isDisplayed());
+		Assert.assertTrue(XUpsellPage.xUpsellTitleText.isDisplayed());
+		Assert.assertTrue(XUpsellPage.xUpsellSubTitleText.isDisplayed());
+		Assert.assertTrue(XUpsellPage.learnMoreBtn.isDisplayed());
+		Assert.assertTrue(XUpsellPage.startXTrialBtn.isDisplayed());
+		XUpsellPage.TapSkipBtn();
+		Thread.sleep(10000);
 	}
 
 }
