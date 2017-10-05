@@ -58,6 +58,6 @@ public class SplashScreenPage extends AbstractPage {
 		//Tap the 'Close' button (X)
 		public static void tapCloseBtn() {
 			closeBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new ExplorePage());
+			PageFactory.initElements(new AppiumFieldDecorator(driver), new XUpsellPage());
 		}
 }
