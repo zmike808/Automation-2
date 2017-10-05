@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidKeyCode;
 import pages.EmailSignUpPage;
+import pages.ExplorePage;
 import pages.FacebookAccountKitPage1;
 import pages.SignInPage;
 import pages.SplashScreenPage;
@@ -96,8 +97,15 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(XUpsellPage.xUpsellSubTitleText.isDisplayed());
 		Assert.assertTrue(XUpsellPage.learnMoreBtn.isDisplayed());
 		Assert.assertTrue(XUpsellPage.startXTrialBtn.isDisplayed());
+	}
+	
+	@Test (priority = 6)
+	public static void VerifyExploreUI() throws InterruptedException {
 		XUpsellPage.TapSkipBtn();
 		Thread.sleep(10000);
+		Assert.assertTrue(ExplorePage.searchBtn.isDisplayed());
+		Assert.assertTrue(ExplorePage.settingsBtn.isDisplayed());
+		Assert.assertTrue(ExplorePage.fmfCardText.isDisplayed());
+		Assert.assertTrue(ExplorePage.imageView.isDisplayed());
 	}
-
 }
