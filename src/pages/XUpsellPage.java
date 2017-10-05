@@ -40,6 +40,7 @@ public class XUpsellPage extends AbstractPage {
 		public static void TapSkipBtn() {
 			skipBtn.click();
 			PageFactory.initElements(new AppiumFieldDecorator(driver), new ExplorePage());
+			PageFactory.initElements(new AppiumFieldDecorator(driver), new NavigationBarPage());
 		}
 
 }

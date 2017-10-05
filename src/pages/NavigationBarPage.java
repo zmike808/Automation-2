@@ -15,7 +15,7 @@ public class NavigationBarPage extends AbstractPage {
 		public static MobileElement exploreNavBtn;
 			
 		//'Studio' button 
-		@FindBy (id="enter_stack_icon")
+		@FindBy (id="center_stack_icon")
 		public static MobileElement studioNavBtn;
 			
 		//'Profile' button 
