@@ -11,6 +11,7 @@ import pages.FacebookAccountKitPage1;
 import pages.NavigationBarPage;
 import pages.SearchPage;
 import pages.SettingsPage;
+import pages.ShopPage;
 import pages.SignInPage;
 import pages.SplashScreenPage;
 import pages.StudioPage;
@@ -79,7 +80,6 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(SignInPage.termsAndPolicyText.isDisplayed());
 		//Phone tab tests
 		SignInPage.phoneTabBtn.click();
-		Thread.sleep(1000);
 		Assert.assertTrue(SignInPage.countryCodeBtn.isDisplayed());
 		Assert.assertTrue(SignInPage.phoneNumberFieldText.isDisplayed());
 		Assert.assertTrue(SignInPage.passwordFieldText.isDisplayed());
@@ -108,7 +108,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	@Test (priority = 6)
 	public static void VerifyExploreUI() throws InterruptedException {
 		XUpsellPage.TapSkipBtn();
-		Thread.sleep(10000);
+		Thread.sleep(1000);
 		Assert.assertTrue(ExplorePage.searchBtn.isDisplayed());
 		Assert.assertTrue(ExplorePage.settingsBtn.isDisplayed());
 		Assert.assertTrue(ExplorePage.fmfCardText.isDisplayed());
@@ -162,4 +162,17 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(StudioPage.zeroDataText.isDisplayed());
 	}
 	
+	//Shop screen
+	@Test (priority = 10)
+	public static void VerifyShopUI() throws InterruptedException {
+		StudioPage.TapShopBtn();
+		Thread.sleep(1000);
+		Assert.assertTrue(ShopPage.closeBtn.isDisplayed());
+		Assert.assertTrue(ShopPage.presetImageView.isDisplayed());
+		Assert.assertTrue(ShopPage.storeProductItem.isDisplayed());
+		//Assert.assertTrue(ShopPage.introducingVSCOXText.isDisplayed());
+		//Assert.assertTrue(ShopPage.vscoXDescriptiveText.isDisplayed());
+		ShopPage.TapCloseBtn();
+		Thread.sleep(1000);
+	}
 }
