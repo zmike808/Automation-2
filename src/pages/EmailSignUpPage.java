@@ -58,7 +58,7 @@ public class EmailSignUpPage extends AbstractPage {
 		
 		public static void tapBackBtn() {
 			backBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new SplashScreenPage());
+			//PageFactory.initElements(new AppiumFieldDecorator(driver), new SplashScreenPage());
 		}
 	}
 

@@ -74,7 +74,7 @@ public class SignInPage extends AbstractPage {
 		//Tap the Back button
 		public static void tapBackBtn() {
 			backBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new SplashScreenPage());
+			//PageFactory.initElements(new AppiumFieldDecorator(driver), new SplashScreenPage());
 		}
 
 }

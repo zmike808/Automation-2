@@ -8,6 +8,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 import pages.EmailSignUpPage;
 import pages.ExplorePage;
 import pages.FacebookAccountKitPage1;
+import pages.SearchPage;
 import pages.SignInPage;
 import pages.SplashScreenPage;
 import pages.XUpsellPage;
@@ -107,5 +108,19 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(ExplorePage.settingsBtn.isDisplayed());
 		Assert.assertTrue(ExplorePage.fmfCardText.isDisplayed());
 		Assert.assertTrue(ExplorePage.imageView.isDisplayed());
+	}
+	
+	@Test (priority = 7)
+	public static void VerifySearchUI() throws InterruptedException {
+		ExplorePage.tapSearchBtn();
+		Thread.sleep(1000);
+		Assert.assertTrue(SearchPage.closeBtn.isDisplayed());
+		Assert.assertTrue(SearchPage.searchField.isDisplayed());
+		Assert.assertTrue(SearchPage.suggestedUserBookStackView.isDisplayed());
+		Assert.assertTrue(SearchPage.suggestedUserUsername.isDisplayed());
+		Assert.assertTrue(SearchPage.suggestedUserTitle.isDisplayed());
+		Assert.assertTrue(SearchPage.suggestedUserDisplayLabel.isDisplayed());
+		Assert.assertTrue(SearchPage.suggestedUserFollowBtn.isDisplayed());
+		SearchPage.tapCloseBtn();		
 	}
 }
