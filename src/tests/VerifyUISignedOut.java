@@ -8,10 +8,12 @@ import io.appium.java_client.android.AndroidKeyCode;
 import pages.EmailSignUpPage;
 import pages.ExplorePage;
 import pages.FacebookAccountKitPage1;
+import pages.NavigationBarPage;
 import pages.SearchPage;
 import pages.SettingsPage;
 import pages.SignInPage;
 import pages.SplashScreenPage;
+import pages.StudioPage;
 import pages.XUpsellPage;
 import utils.AbstractTest;
 
@@ -89,6 +91,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		Thread.sleep(1000);
 	}
 	
+	//VSCO X Upsell screen
 	@Test (priority = 5)
 	public static void VerifyXUpsellUI() throws InterruptedException {
 		SplashScreenPage.tapCloseBtn();
@@ -101,6 +104,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(XUpsellPage.startXTrialBtn.isDisplayed());
 	}
 	
+	//Explore screen
 	@Test (priority = 6)
 	public static void VerifyExploreUI() throws InterruptedException {
 		XUpsellPage.TapSkipBtn();
@@ -111,6 +115,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(ExplorePage.imageView.isDisplayed());
 	}
 	
+	//Search screen
 	@Test (priority = 7)
 	public static void VerifySearchUI() throws InterruptedException {
 		ExplorePage.tapSearchBtn();
@@ -126,6 +131,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		Thread.sleep(1000);
 	}
 	
+	//Settings screen
 	@Test (priority = 8)
 	public static void VerifySettingsUI() throws InterruptedException {
 		ExplorePage.tapSettingsBtn();
@@ -143,4 +149,17 @@ public class VerifyUISignedOut extends AbstractTest {
 		SettingsPage.TapCloseBtn();
 		Thread.sleep(1000);
 	}
+	
+	//Studio screen
+	@Test (priority = 9)
+	public static void VerifyStudioUI() throws InterruptedException {
+		NavigationBarPage.TapStudioNavBtn();
+		Thread.sleep(1000);
+		Assert.assertTrue(StudioPage.cameraPreview.isDisplayed());
+		Assert.assertTrue(StudioPage.shopBtn.isDisplayed());
+		Assert.assertTrue(StudioPage.studioFilterBtn.isDisplayed());
+		Assert.assertTrue(StudioPage.importBtn.isDisplayed());
+		Assert.assertTrue(StudioPage.zeroDataText.isDisplayed());
+	}
+	
 }
