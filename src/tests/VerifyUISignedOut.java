@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidKeyCode;
 import pages.EmailSignUpPage;
 import pages.FacebookAccountKitPage1;
+import pages.SignInPage;
 import pages.SplashScreenPage;
 import utils.AbstractTest;
 
@@ -51,6 +52,36 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(FacebookAccountKitPage1.nextBtn.isDisplayed());
 		driver.pressKeyCode(AndroidKeyCode.BACK);
 		driver.pressKeyCode(AndroidKeyCode.BACK);
+		Thread.sleep(1000);
+	}
+	
+	//Sign In screen
+	@Test (priority = 4)
+	public static void VerifySignInUI() throws InterruptedException {
+		SplashScreenPage.tapSignInBtn();
+		Thread.sleep(1000);
+		//Email tab tests
+		Assert.assertTrue(SignInPage.backBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.headerText.isDisplayed());
+		Assert.assertTrue(SignInPage.emailTabBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.phoneTabBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.emailFieldText.isDisplayed());
+		Assert.assertTrue(SignInPage.passwordFieldText.isDisplayed());
+		Assert.assertTrue(SignInPage.fgtPasswordBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.phoneTabBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.signInBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.termsAndPolicyText.isDisplayed());
+		//Phone tab tests
+		SignInPage.phoneTabBtn.click();
+		Thread.sleep(1000);
+		Assert.assertTrue(SignInPage.countryCodeBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.phoneNumberFieldText.isDisplayed());
+		Assert.assertTrue(SignInPage.passwordFieldText.isDisplayed());
+		Assert.assertTrue(SignInPage.fgtPasswordBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.emailTabBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.signInBtn.isDisplayed());
+		Assert.assertTrue(SignInPage.termsAndPolicyText.isDisplayed());
+		SignInPage.tapBackBtn();
 		Thread.sleep(1000);
 	}
 
