@@ -22,7 +22,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//Splash screen
 	@Test (priority = 1)
-	public static void VerifySplashScreenUI() {
+	public static void SplashScreenUI() {
 		Assert.assertTrue(SplashScreenPage.closeBtn.isDisplayed());
 		Assert.assertTrue(SplashScreenPage.descText.isDisplayed());
 		Assert.assertTrue(SplashScreenPage.splashText.isDisplayed());
@@ -33,7 +33,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//Email Sign Up screen
 	@Test (priority = 2)
-	public static void VerifyEmailSignUpUI() throws InterruptedException {
+	public static void EmailSignUpUI() throws InterruptedException {
 		SplashScreenPage.tapEmailSignUpBtn();
 		Assert.assertTrue(EmailSignUpPage.backBtn.isDisplayed());
 		Assert.assertTrue(EmailSignUpPage.title.isDisplayed());
@@ -48,7 +48,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//Phone Sign Up screen (FacebookAccountKitPage1)
 	@Test (priority = 3)
-	public static void VerifyPhoneSignUpUI() throws InterruptedException {
+	public static void PhoneSignUpUI() throws InterruptedException {
 		SplashScreenPage.tapPhoneSignUpBtn();
 		Assert.assertTrue(FacebookAccountKitPage1.enterYourPhoneText.isDisplayed());
 		Assert.assertTrue(FacebookAccountKitPage1.phoneNumberField.isDisplayed());
@@ -62,7 +62,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//Sign In screen
 	@Test (priority = 4)
-	public static void VerifySignInUI() throws InterruptedException {
+	public static void SignInUI() throws InterruptedException {
 		SplashScreenPage.tapSignInBtn();
 		//Email tab tests
 		Assert.assertTrue(SignInPage.backBtn.isDisplayed());
@@ -89,7 +89,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//VSCO X Upsell screen
 	@Test (priority = 5)
-	public static void VerifyXUpsellUI() throws InterruptedException {
+	public static void XUpsellUI() throws InterruptedException {
 		SplashScreenPage.tapCloseBtn();
 		Assert.assertTrue(XUpsellPage.closeBtn.isDisplayed());
 		Assert.assertTrue(XUpsellPage.skipBtn.isDisplayed());
@@ -101,7 +101,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//Explore screen
 	@Test (priority = 6)
-	public static void VerifyExploreUI() throws InterruptedException {
+	public static void ExploreUI() throws InterruptedException {
 		XUpsellPage.TapSkipBtn();
 		Assert.assertTrue(ExplorePage.searchBtn.isDisplayed());
 		Assert.assertTrue(ExplorePage.settingsBtn.isDisplayed());
@@ -111,7 +111,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//Search screen
 	@Test (priority = 7)
-	public static void VerifySearchUI() throws InterruptedException {
+	public static void SearchUI() throws InterruptedException {
 		ExplorePage.tapSearchBtn();
 		Assert.assertTrue(SearchPage.closeBtn.isDisplayed());
 		Assert.assertTrue(SearchPage.searchField.isDisplayed());
@@ -125,7 +125,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//Settings screen
 	@Test (priority = 8)
-	public static void VerifySettingsUI() throws InterruptedException {
+	public static void SettingsUI() throws InterruptedException {
 		ExplorePage.tapSettingsBtn();
 		Assert.assertTrue(SettingsPage.closeBtn.isDisplayed());
 		Assert.assertTrue(SettingsPage.headerText.isDisplayed());
@@ -142,7 +142,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//Studio screen
 	@Test (priority = 9)
-	public static void VerifyStudioUI() throws InterruptedException {
+	public static void StudioUI() throws InterruptedException {
 		NavigationBarPage.TapStudioNavBtn();
 		Assert.assertTrue(StudioPage.cameraPreview.isDisplayed());
 		Assert.assertTrue(StudioPage.shopBtn.isDisplayed());
@@ -153,7 +153,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	
 	//Shop screen
 	@Test (priority = 10)
-	public static void VerifyShopUI() throws InterruptedException {
+	public static void ShopUI() throws InterruptedException {
 		StudioPage.TapShopBtn();
 		Assert.assertTrue(ShopPage.closeBtn.isDisplayed());
 		Assert.assertTrue(ShopPage.presetImageView.isDisplayed());
