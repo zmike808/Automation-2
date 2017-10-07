@@ -40,7 +40,7 @@ public void setup() throws MalformedURLException, InterruptedException {
 } catch (MalformedURLException e) {
 	e.printStackTrace();
 } 
-driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 PageFactory.initElements(new AppiumFieldDecorator(driver), new SplashScreenPage());
 }
 
