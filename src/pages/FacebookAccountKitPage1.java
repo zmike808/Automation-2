@@ -43,6 +43,22 @@ public class FacebookAccountKitPage1 extends AbstractPage {
 //				
 //			}
 		
+		//Tap country code button
+		public static void TapCountryCodeBtn() {
+			countryCodeBtn.click();
+		}
+		
+		//Tap Phone Number field
+		public static void TapPhoneNumberField() {
+			phoneNumberField.click();
+		}
+		
+		//Tap Next button
+		public static void TapNNextButton() {
+			nextBtn.click();
+		}
+		
+		
 		public static void InitElements() {
 			PageFactory.initElements(new AppiumFieldDecorator(driver), new FacebookAccountKitPage1());
 		}

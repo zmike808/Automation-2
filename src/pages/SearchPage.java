@@ -32,16 +32,38 @@ public class SearchPage extends AbstractPage {
 
 		//Suggested user bookstack view
 		@FindBy (id="suggested_users_bookstack_view")
-		public static MobileElement suggestedUserBookStackView;
+		public static MobileElement suggestedUserBookstackView;
 		
 		//Suggested User Follow button
 		@FindBy (id="suggested_users_item_follow_button")
 		public static MobileElement suggestedUserFollowBtn;
 		
 	//Methods
+		//Tap Close button
 		public static void tapCloseBtn() {
 			closeBtn.click();
 		}
+		
+		//Tap Search Field
+		public static void TapSearchField() {
+			searchField.click();
+		}
+		
+		//Tap Suggested user Username
+		public static void TapSugUsername() {
+			suggestedUserUsername.click();
+		}
+		
+		//Tap Suggested User Images
+		public static void TapSugUserImages() {
+			suggestedUserBookstackView.click();
+		}
+		
+		//Tap Suggested User Follow button
+		public static void TapSugUserFollowBtn() {
+			suggestedUserFollowBtn.click();
+		}
+		
 		
 		public static void InitElements() {
 			PageFactory.initElements(new AppiumFieldDecorator(driver), new SearchPage());

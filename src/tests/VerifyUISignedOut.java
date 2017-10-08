@@ -121,7 +121,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		SearchPage.InitElements();
 		Assert.assertTrue(SearchPage.closeBtn.isDisplayed());
 		Assert.assertTrue(SearchPage.searchField.isDisplayed());
-		Assert.assertTrue(SearchPage.suggestedUserBookStackView.isDisplayed());
+		Assert.assertTrue(SearchPage.suggestedUserBookstackView.isDisplayed());
 		Assert.assertTrue(SearchPage.suggestedUserUsername.isDisplayed());
 		Assert.assertTrue(SearchPage.suggestedUserTitle.isDisplayed());
 		Assert.assertTrue(SearchPage.suggestedUserDisplayLabel.isDisplayed());

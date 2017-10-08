@@ -39,6 +39,17 @@ public class ExplorePage extends AbstractPage {
 			ExplorePage.settingsBtn.click();
 		}
 		
+		//Tap FMF card
+		public static void TapFMFCard() {
+			fmfCardText.click();
+		}
+		
+		//Tap image view
+		public static void  TapImageView () {
+			imageView.click();
+		}
+		
+		//Initialize Sign In Page Elements
 		public static void InitElements() {
 			PageFactory.initElements(new AppiumFieldDecorator(driver), new ExplorePage());
 		}
