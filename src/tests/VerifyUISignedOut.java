@@ -35,6 +35,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	@Test (priority = 2)
 	public static void EmailSignUpUI() throws InterruptedException {
 		SplashScreenPage.tapEmailSignUpBtn();
+		EmailSignUpPage.InitElements();
 		Assert.assertTrue(EmailSignUpPage.backBtn.isDisplayed());
 		Assert.assertTrue(EmailSignUpPage.title.isDisplayed());
 		Assert.assertTrue(EmailSignUpPage.emailField.isDisplayed());
@@ -42,7 +43,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(EmailSignUpPage.passwordField.isDisplayed());
 		Assert.assertTrue(EmailSignUpPage.agreeToTermsText.isDisplayed());
 		Assert.assertTrue(EmailSignUpPage.signUpBtn.isDisplayed());
-		EmailSignUpPage.tapBackBtn();
+		EmailSignUpPage.TapBackBtn();
 		
 	}
 	
@@ -50,6 +51,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	@Test (priority = 3)
 	public static void PhoneSignUpUI() throws InterruptedException {
 		SplashScreenPage.tapPhoneSignUpBtn();
+		FacebookAccountKitPage1.InitElements();
 		Assert.assertTrue(FacebookAccountKitPage1.enterYourPhoneText.isDisplayed());
 		Assert.assertTrue(FacebookAccountKitPage1.phoneNumberField.isDisplayed());
 		Assert.assertTrue(FacebookAccountKitPage1.countryCodeBtn.isDisplayed());
@@ -64,6 +66,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	@Test (priority = 4)
 	public static void SignInUI() throws InterruptedException {
 		SplashScreenPage.tapSignInBtn();
+		SignInPage.InitElements();
 		//Email tab tests
 		Assert.assertTrue(SignInPage.backBtn.isDisplayed());
 		Assert.assertTrue(SignInPage.headerText.isDisplayed());
@@ -91,6 +94,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	@Test (priority = 5)
 	public static void XUpsellUI() throws InterruptedException {
 		SplashScreenPage.tapCloseBtn();
+		XUpsellPage.InitElements();
 		Assert.assertTrue(XUpsellPage.closeBtn.isDisplayed());
 		Assert.assertTrue(XUpsellPage.skipBtn.isDisplayed());
 		Assert.assertTrue(XUpsellPage.xUpsellTitleText.isDisplayed());
@@ -103,6 +107,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	@Test (priority = 6)
 	public static void ExploreUI() throws InterruptedException {
 		XUpsellPage.TapSkipBtn();
+		ExplorePage.InitElements();
 		Assert.assertTrue(ExplorePage.searchBtn.isDisplayed());
 		Assert.assertTrue(ExplorePage.settingsBtn.isDisplayed());
 		Assert.assertTrue(ExplorePage.fmfCardText.isDisplayed());
@@ -113,6 +118,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	@Test (priority = 7)
 	public static void SearchUI() throws InterruptedException {
 		ExplorePage.tapSearchBtn();
+		SearchPage.InitElements();
 		Assert.assertTrue(SearchPage.closeBtn.isDisplayed());
 		Assert.assertTrue(SearchPage.searchField.isDisplayed());
 		Assert.assertTrue(SearchPage.suggestedUserBookStackView.isDisplayed());
@@ -127,6 +133,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	@Test (priority = 8)
 	public static void SettingsUI() throws InterruptedException {
 		ExplorePage.tapSettingsBtn();
+		SettingsPage.InitElements();
 		Assert.assertTrue(SettingsPage.closeBtn.isDisplayed());
 		Assert.assertTrue(SettingsPage.headerText.isDisplayed());
 		Assert.assertTrue(SettingsPage.xMembershipBtn.isDisplayed());
@@ -143,7 +150,9 @@ public class VerifyUISignedOut extends AbstractTest {
 	//Studio screen
 	@Test (priority = 9)
 	public static void StudioUI() throws InterruptedException {
+		NavigationBarPage.InitElements();
 		NavigationBarPage.TapStudioNavBtn();
+		StudioPage.InitElements();
 		Assert.assertTrue(StudioPage.cameraPreview.isDisplayed());
 		Assert.assertTrue(StudioPage.shopBtn.isDisplayed());
 		Assert.assertTrue(StudioPage.studioFilterBtn.isDisplayed());
@@ -155,6 +164,7 @@ public class VerifyUISignedOut extends AbstractTest {
 	@Test (priority = 10)
 	public static void ShopUI() throws InterruptedException {
 		StudioPage.TapShopBtn();
+		ShopPage.InitElements();
 		Assert.assertTrue(ShopPage.closeBtn.isDisplayed());
 		Assert.assertTrue(ShopPage.presetImageView.isDisplayed());
 		Assert.assertTrue(ShopPage.storeProductItem.isDisplayed());

@@ -35,12 +35,14 @@ public class StudioPage extends AbstractPage {
 		//Tap the Shop button
 		public static void TapShopBtn() {
 			shopBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new ShopPage());
 		}
 		
 		//Tap the Import button
 		public static void TapImportBtn() {
 			importBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new ImportPage());
+		}
+		
+		public static void InitElements() {
+			PageFactory.initElements(new AppiumFieldDecorator(driver), new StudioPage());
 		}
 }

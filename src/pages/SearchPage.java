@@ -1,8 +1,10 @@
 package pages;
 
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.AbstractPage;
 
 public class SearchPage extends AbstractPage {
@@ -39,6 +41,10 @@ public class SearchPage extends AbstractPage {
 	//Methods
 		public static void tapCloseBtn() {
 			closeBtn.click();
+		}
+		
+		public static void InitElements() {
+			PageFactory.initElements(new AppiumFieldDecorator(driver), new SearchPage());
 		}
 	
 		

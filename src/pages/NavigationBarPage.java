@@ -27,19 +27,20 @@ public class NavigationBarPage extends AbstractPage {
 		//Tap the Explore Navigation Bar button
 		public static void TapExploreNavBtn() {
 			exploreNavBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new ExplorePage());
 		}
 			
 		//Tap the Studio Navigation Bar button
 		public static void TapStudioNavBtn() {
 			studioNavBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new StudioPage());
 		}
 		
 		//Tap the Profile Navigation Bar button
 		public static void TapProfileNavBtn() {
 			profileNavBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new PrivateProfilePage());
+		}
+		
+		public static void InitElements() {
+			PageFactory.initElements(new AppiumFieldDecorator(driver), new NavigationBarPage());
 		}
 
 }

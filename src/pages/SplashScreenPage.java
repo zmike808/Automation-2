@@ -39,25 +39,25 @@ public class SplashScreenPage extends AbstractPage {
 		//Tap the 'Email Sign up' button
 		public static void tapEmailSignUpBtn() {
 			emailSignUpBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new EmailSignUpPage());
 		}
 		
 		//Tap the 'Phone Sign up' button
 		public static void tapPhoneSignUpBtn() {
 			phoneSignUpBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new FacebookAccountKitPage1());
 		}
 		
 		//Tap the 'Sign in' button
 		public static void tapSignInBtn() {
 			TouchAction tapCoordinates = new TouchAction(driver); //where driver is AppiumDriver
 			tapCoordinates.tap(967,2261).perform();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new SignInPage());
 		}
 		
 		//Tap the 'Close' button (X)
 		public static void tapCloseBtn() {
 			closeBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new XUpsellPage());
+		}
+		
+		public static void InitElements() {
+			PageFactory.initElements(new AppiumFieldDecorator(driver), new SplashScreenPage());
 		}
 }

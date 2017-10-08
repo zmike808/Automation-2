@@ -7,6 +7,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.AbstractPage;
 
+
 public class ExplorePage extends AbstractPage {
 	
 	//Objects
@@ -31,16 +32,16 @@ public class ExplorePage extends AbstractPage {
 		//Tap the Search button
 		public static void tapSearchBtn() {
 			ExplorePage.searchBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new SearchPage());
 		}
 		
 		//Tap the Settings button
 		public static void tapSettingsBtn() {
 			ExplorePage.settingsBtn.click();
-			PageFactory.initElements(new AppiumFieldDecorator(driver), new SettingsPage());
 		}
 		
-		
+		public static void InitElements() {
+			PageFactory.initElements(new AppiumFieldDecorator(driver), new ExplorePage());
+		}
 		
 		//Tap Image View (TODO)
 

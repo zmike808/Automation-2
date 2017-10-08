@@ -26,7 +26,7 @@ public static AndroidDriver<MobileElement> driver;
 @BeforeSuite
 public void setup() throws MalformedURLException, InterruptedException {
 	File appDir = new File("src");
-	File app = new File(appDir, "VSCO-35(1324).apk");
+	File app = new File(appDir, "vsco.apk");
 	DesiredCapabilities cap = new DesiredCapabilities();
 	cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
 	cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");

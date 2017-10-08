@@ -56,9 +56,32 @@ public class EmailSignUpPage extends AbstractPage {
 			return title.getText();
 		}
 		
-		public static void tapBackBtn() {
+		public static void TapBackBtn() {
 			backBtn.click();
-			//PageFactory.initElements(new AppiumFieldDecorator(driver), new SplashScreenPage());
+		}
+		
+		public static void TapEmailField() {
+			emailField.click();
+		}
+		
+		public static void TapPasswordField() {
+			passwordField.click();
+		}
+		
+		public static void TapShowPasswordBtn () {
+			showPasswordBtn.click();
+		}
+		
+		public static void TapUsernameField() {
+			usernameField.click();
+		}
+		
+		public static void TapSignUpBtn() {
+			signUpBtn.click();
+		}
+		
+		public static void InitElements() {
+			PageFactory.initElements(new AppiumFieldDecorator(driver), new EmailSignUpPage());
 		}
 	}
 
