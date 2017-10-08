@@ -30,12 +30,12 @@ public class ExplorePage extends AbstractPage {
 		
 	//Methods
 		//Tap the Search button
-		public static void tapSearchBtn() {
+		public static void TapSearchBtn() {
 			ExplorePage.searchBtn.click();
 		}
 		
 		//Tap the Settings button
-		public static void tapSettingsBtn() {
+		public static void TapSettingsBtn() {
 			ExplorePage.settingsBtn.click();
 		}
 		

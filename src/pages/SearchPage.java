@@ -40,7 +40,7 @@ public class SearchPage extends AbstractPage {
 		
 	//Methods
 		//Tap Close button
-		public static void tapCloseBtn() {
+		public static void TapCloseBtn() {
 			closeBtn.click();
 		}
 		

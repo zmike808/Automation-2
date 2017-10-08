@@ -37,23 +37,23 @@ public class SplashScreenPage extends AbstractPage {
 		
 	//Methods
 		//Tap the 'Email Sign up' button
-		public static void tapEmailSignUpBtn() {
+		public static void TapEmailSignUpBtn() {
 			emailSignUpBtn.click();
 		}
 		
 		//Tap the 'Phone Sign up' button
-		public static void tapPhoneSignUpBtn() {
+		public static void TapPhoneSignUpBtn() {
 			phoneSignUpBtn.click();
 		}
 		
 		//Tap the 'Sign in' button
-		public static void tapSignInBtn() {
+		public static void TapSignInBtn() {
 			TouchAction tapCoordinates = new TouchAction(driver); //where driver is AppiumDriver
 			tapCoordinates.tap(967,2261).perform();
 		}
 		
 		//Tap the 'Close' button (X)
-		public static void tapCloseBtn() {
+		public static void TapCloseBtn() {
 			closeBtn.click();
 		}
 		

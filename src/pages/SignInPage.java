@@ -72,7 +72,7 @@ public class SignInPage extends AbstractPage {
 		
 	///Methods
 		//Tap the Back button
-		public static void tapBackBtn() {
+		public static void TapBackBtn() {
 			backBtn.click();
 		}
 		
