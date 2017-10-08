@@ -49,11 +49,10 @@ public class ExplorePage extends AbstractPage {
 			imageView.click();
 		}
 		
-		//Initialize Sign In Page Elements
+		//Initialize Explore Page Elements
 		public static void InitElements() {
 			PageFactory.initElements(new AppiumFieldDecorator(driver), new ExplorePage());
 		}
 		
-		//Tap Image View (TODO)
 
 }

@@ -76,6 +76,46 @@ public class SignInPage extends AbstractPage {
 			backBtn.click();
 		}
 		
+		// Tap EMAIL Tab 
+		public static void TapEmailTab() {
+			emailTabBtn.click();
+		}
+		
+		// Tap PHONE Tab
+		public static void TapPhoneTab() {
+			phoneTabBtn.click();
+		}
+		
+		// Tap Email or Profile Field text
+		public static void TapEmailFieldTxt() {
+			emailFieldText.click();
+		}
+		
+		// Tap Country Code button
+		public static void TapCountryCodeBtn() {
+			countryCodeBtn.click();
+		}
+		
+		// Tap  Phone Number Field text
+		public static void TapPhoneFieldTxt() {
+			phoneNumberFieldText.click();
+		}
+		
+		// Tap Forgot Password button
+		public static void TapFgtPwdBtn() {
+			fgtPasswordBtn.click();
+		}
+		
+		// Tap Sign In button
+		public static void TapSignInBtn() {
+			signInBtn.click();
+		}
+		
+		// Tap Password Field text
+		public static void TapPwdTxt() {
+			passwordFieldText.click();
+		}
+		
 		public static void InitElements() {
 			PageFactory.initElements(new AppiumFieldDecorator(driver), new SignInPage());
 		}

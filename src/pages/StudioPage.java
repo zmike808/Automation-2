@@ -18,7 +18,7 @@ public class StudioPage extends AbstractPage {
 		@FindBy (id="header_left_shop_text")
 		public static MobileElement shopBtn;
 		
-		//'View' header text AKA Studio Filtr button 
+		//'View' header text AKA Studio Filter button 
 		@FindBy (id="studio_header_text")
 		public static MobileElement studioFilterBtn;
 				
@@ -40,6 +40,16 @@ public class StudioPage extends AbstractPage {
 		//Tap the Import button
 		public static void TapImportBtn() {
 			importBtn.click();
+		}
+		
+		//Tap the Camera Preview
+		public static void TapCameraPreview() {
+			cameraPreview.click();
+		}
+		
+		//Tap the Studio Filter button
+		public static void TapStudioFilterBtn() {
+			studioFilterBtn.click();
 		}
 		
 		public static void InitElements() {

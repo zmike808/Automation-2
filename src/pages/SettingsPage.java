@@ -57,6 +57,42 @@ public class SettingsPage extends AbstractPage {
 			closeBtn.click();
 		}
 		
+		// Tap VSCO X Membershup button
+		public static void TapXMembershipBtn() {
+			xMembershipBtn.click();
+		}
+		
+		// Tap About VSCO button
+		public static void TapAboutVSCOBtn() {
+			aboutVSCOBtn.click();
+		}
+		
+		// Tap Preferences button
+		public static void TapPreferencesBtn() {
+			preferenceBtn.click();
+		}
+		
+		// Tap Social button
+		public static void TapSocialBtn() {
+			socialBtn.click();
+		}
+		
+		// Tap Privacy button
+		public static void TapPrivacyBtn() {
+			privacyBtn.click();
+		}
+		
+		// Tap Licensing button
+		public static void TapLicensingBtn() {
+			licensingBtn.click();
+		}
+		
+		// Tap Support button
+		public static void TapSupportBtn() {
+			supportBtn.click();
+		}
+		
+		
 		public static void InitElements() {
 			PageFactory.initElements(new AppiumFieldDecorator(driver), new SettingsPage());
 		}

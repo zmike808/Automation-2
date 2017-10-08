@@ -41,6 +41,22 @@ public class XUpsellPage extends AbstractPage {
 			skipBtn.click();
 		}
 		
+		//Tap the Close button
+		public static void TapCloseBtn() {
+			closeBtn.click();
+		}
+		
+		// Tap Learn More button
+		public static void TapLearnMoreBtn() {
+			learnMoreBtn.click();
+		}
+		
+		
+		//Tap  Start Free Trial button
+		public static void TapFreeTrialBtn() {
+			startXTrialBtn.click();
+		}
+		
 		public static void InitElements() {
 			PageFactory.initElements(new AppiumFieldDecorator(driver), new XUpsellPage());
 		}
