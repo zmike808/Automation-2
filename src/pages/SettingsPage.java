@@ -50,6 +50,9 @@ public class SettingsPage extends AbstractPage {
 		@FindBy (id="settings_version_number")
 		public static MobileElement versionNumber;
 		
+		//'Sign Out' button
+		@FindBy (id="settings_sign_out")
+		public static MobileElement signOutBtn;
 	
 	//Methods
 		//Tap the Close button
@@ -57,7 +60,7 @@ public class SettingsPage extends AbstractPage {
 			closeBtn.click();
 		}
 		
-		// Tap VSCO X Membershup button
+		// Tap VSCO X Membership button
 		public static void TapXMembershipBtn() {
 			xMembershipBtn.click();
 		}
@@ -90,6 +93,11 @@ public class SettingsPage extends AbstractPage {
 		// Tap Support button
 		public static void TapSupportBtn() {
 			supportBtn.click();
+		}
+		
+		//Tap Sign Out button
+		public static void TapSignOutBtn() {
+			signOutBtn.click();
 		}
 		
 		

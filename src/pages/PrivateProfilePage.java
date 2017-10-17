@@ -14,9 +14,15 @@ public class PrivateProfilePage extends AbstractPage {
 		@FindBy (id="profile_primary_text")
 		public static MobileElement usernameText;
 	
-	
+	// Settings button	
+	@FindBy (id="header_settings_button")
+	public static MobileElement settingsBtn;
 	
 	public static void InitElements() {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), new PrivateProfilePage());
+	}
+	
+	public static void TapSettingsBtn() {
+		settingsBtn.click();
 	}
 }

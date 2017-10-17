@@ -27,7 +27,7 @@ public static AndroidDriver<MobileElement> driver;
 @BeforeSuite
 public void setup() throws MalformedURLException, InterruptedException {
 	File appDir = new File("src");
-	File app = new File(appDir, "VSCO-35(1324).apk");
+	File app = new File(appDir, "vsco.apk");
 	DesiredCapabilities cap = new DesiredCapabilities();
 	cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
 	cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
@@ -98,7 +98,7 @@ public static void Email() {
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_O);
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_1);
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_2);
-	driver.pressKeyCode(AndroidKeyCode.KEYCODE_3);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_7);
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_AT);
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_S);
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_H);
@@ -130,6 +130,10 @@ public static void ProfileName() {
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_O);
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_1);
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_2);
-	driver.pressKeyCode(AndroidKeyCode.KEYCODE_3);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_7);
 }
+
+	public void scrollTo(String text) {                
+	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+text+"\").instance(0))");
+	}
 }
