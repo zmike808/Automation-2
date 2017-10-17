@@ -91,6 +91,11 @@ public class SignInPage extends AbstractPage {
 			emailFieldText.click();
 		}
 		
+		// Tap Email or Profile Field
+		public static void TapEmailField() {
+			emailField.click();
+		}
+		
 		// Tap Country Code button
 		public static void TapCountryCodeBtn() {
 			countryCodeBtn.click();
@@ -119,5 +124,7 @@ public class SignInPage extends AbstractPage {
 		public static void InitElements() {
 			PageFactory.initElements(new AppiumFieldDecorator(driver), new SignInPage());
 		}
+		
+		
 
 }
