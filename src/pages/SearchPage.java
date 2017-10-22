@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -17,6 +19,22 @@ public class SearchPage extends AbstractPage {
 		//Search Field
 		@FindBy (id="grid_search_box")
 		public static MobileElement searchField;
+		
+		//header_center_layout list
+		@FindBy (id="com.vsco.cam:id/header_center_layout")
+		public static List <MobileElement> headerCenterList;
+		
+		//People tab
+		@FindBy (xpath="//android.widget.TextView[@text='People']")
+		public static MobileElement peopleTab;
+		
+		//Images tab
+		@FindBy (xpath="//android.widget.TextView[@text='Images']")
+		public static MobileElement imagesTab;
+		
+		//Journal tab
+		@FindBy (xpath="//android.widget.TextView[@text='Journal']")
+		public static MobileElement journalTab;
 
 		//Suggested user Username
 		@FindBy (id="suggested_users_item_grid_username")
@@ -37,6 +55,10 @@ public class SearchPage extends AbstractPage {
 		//Suggested User Follow button
 		@FindBy (id="suggested_users_item_follow_button")
 		public static MobileElement suggestedUserFollowBtn;
+		
+		//username on People Tab
+		@FindBy (id="user_row_grid")
+		public static List<MobileElement> peopleUsername;
 		
 	//Methods
 		//Tap Close button
@@ -63,6 +85,23 @@ public class SearchPage extends AbstractPage {
 		public static void TapSugUserFollowBtn() {
 			suggestedUserFollowBtn.click();
 		}
+		
+		//Tap Images tab
+		public static void TapImagesTab() {
+			imagesTab.click();
+			
+		}
+		
+		//Tap People tab
+		public static void TapPeopleTab() {
+			peopleTab.click();
+		}
+		
+		//Tap Journal Tab
+		public static void TapJournalTab() {
+			journalTab.click();
+		}
+		
 		
 		
 		public static void InitElements() {

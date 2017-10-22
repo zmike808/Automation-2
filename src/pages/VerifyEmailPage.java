@@ -10,23 +10,23 @@ import utils.AbstractTest;
 public class VerifyEmailPage extends AbstractTest {
 //Objects
 	//Close Button
-	@FindBy (id = "com.vsco.cam:id/verify_email_close_button")
+	@FindBy (id = "verify_email_close_button")
 	public static MobileElement closeBtn;
 	
 	//"Please verify your email" text
-	@FindBy (id = "com.vsco.cam:id/verify_email_header_text")
+	@FindBy (id = "verify_email_header_text")
 	public static MobileElement verifyEmailTxt;
 	
 	//"Resend verification email" button
-	@FindBy (id = "com.vsco.cam:id/verify_email_resend_button")
+	@FindBy (id = "verify_email_resend_button")
 	public static MobileElement resendEmailBtn;
 	
 	//"Edit email address" button
-	@FindBy (id = "com.vsco.cam:id/verify_email_edit_email_button")
+	@FindBy (id = "verify_email_edit_email_button")
 	public static MobileElement editEmailBtn;
 	
 	//"Check verification" button
-	@FindBy (id = "com.vsco.cam:id/verify_email_check_activation_button")
+	@FindBy (id = "verify_email_check_activation_button")
 	public static MobileElement checkVerificationBtn;
 	
 //Methods

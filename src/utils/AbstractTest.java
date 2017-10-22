@@ -133,7 +133,13 @@ public static void ProfileName() {
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_7);
 }
 
-	public void scrollTo(String text) {                
+	public static void scrollTo(String text) {                
 	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+text+"\").instance(0))");
+	}
+	
+	public static void SearchTerm() {
+		driver.pressKeyCode(AndroidKeyCode.KEYCODE_C);
+		driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+		driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
 	}
 }

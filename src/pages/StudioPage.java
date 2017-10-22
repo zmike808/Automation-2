@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -29,6 +31,13 @@ public class StudioPage extends AbstractPage {
 		//'Import or capture an image to begin editing' zero data text 
 		@FindBy (id="studio_empty_text")
 		public static MobileElement zeroDataText;
+		
+		//Studio Photo list
+		@FindBy(id="studio_photo_view")
+		public static List<MobileElement> photos;
+		
+		//First Studio Photo
+		
 				
 		
 	//Methods

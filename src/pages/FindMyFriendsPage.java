@@ -9,20 +9,20 @@ import utils.AbstractPage;
 
 public class FindMyFriendsPage extends AbstractPage {
 	
-	@FindBy (id = "com.vsco.cam:id/find_my_friends_header_text")
+	@FindBy (id = "find_my_friends_header_text")
 	public static MobileElement headerTxt;
 	
-	@FindBy (id = "com.vsco.cam:id/find_my_friends_twitter_button")
+	@FindBy (id = "find_my_friends_twitter_button")
 	public static MobileElement addFromTwitterBtn;
 	
-	@FindBy (id = "com.vsco.cam:id/find_my_friends_contacts_button")
+	@FindBy (id = "find_my_friends_contacts_button")
 	public static MobileElement addFromContactsBtn;
 	
-	@FindBy (id = "com.vsco.cam:id/find_my_friends_skip_button")
+	@FindBy (id = "find_my_friends_skip_button")
 	public static MobileElement skipBtn;
 	
 	//Suggested Users
-	@FindBy (id = "com.vsco.cam:id/header_right_button")
+	@FindBy (id = "header_right_button")
 	public static MobileElement nextBtn;
 	
 	

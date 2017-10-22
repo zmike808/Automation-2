@@ -1,77 +1,62 @@
 package tests;
 
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
-import pages.EmailSignUpPage;
-import pages.ExplorePage;
-import pages.FindMyFriendsPage;
-import pages.NavigationBarPage;
-import pages.PrivateProfilePage;
-import pages.SettingsPage;
-import pages.SignInPage;
-import pages.SplashScreenPage;
-import pages.VerifyEmailPage;
-import pages.XUpsellPage;
+
 import utils.AbstractTest;
 
 public class SanityTest extends AbstractTest {
 	
 	//Verify Email Sign Up
-	@Test (priority = 0)
-	public static void EmailSignUp() throws InterruptedException {
-		SplashScreenPage.TapEmailSignUpBtn();
-		EmailSignUpPage.InitElements();
-		EmailSignUpPage.TapEmailField();
-		AbstractTest.Email();
-		EmailSignUpPage.TapUsernameField();
-		AbstractTest.ProfileName();
-		EmailSignUpPage.TapPasswordField();
-		AbstractTest.Password();
-		Thread.sleep(1000);
-		EmailSignUpPage.TapSignUpBtn();
-		XUpsellPage.InitElements();
-		XUpsellPage.TapSkipBtn();
-		VerifyEmailPage.InitElements();
-		Thread.sleep(30000);
-		System.out.println("Verify the email within 30 seconds");
-		VerifyEmailPage.TapChkVerificationBtn();
-		FindMyFriendsPage.InitElements();
-		FindMyFriendsPage.TapSkipBtn();
-		FindMyFriendsPage.TapSugNextBtn();
-		ExplorePage.InitElements();
-		Assert.assertTrue(ExplorePage.imageView.isDisplayed());
+	@Test (priority = 0, enabled = false)
+	public static void EmailSignUpFreshInstall() throws InterruptedException {
+		OnboardingTests.EmailSignUpFreshInstall();
 	}
 	
 	//Verify Signing out of VSCO
-	@Test (priority = 1)
-	public static void SignOut() {
-		NavigationBarPage.InitElements();
-		NavigationBarPage.TapProfileNavBtn();
-		PrivateProfilePage.InitElements();
-		PrivateProfilePage.TapSettingsBtn();
-		SettingsPage.InitElements();
-		SettingsPage.TapSignOutBtn();
-		Assert.assertTrue(ExplorePage.imageView.isDisplayed());
-		NavigationBarPage.TapProfileNavBtn();
-		Assert.assertTrue(SplashScreenPage.splashText.isDisplayed());
-	}
+//	@Test (priority = 1, enabled = false)
+//	public static void SignOut() {
+//		OnboardingTests.SignOut();
+//	}
 	
 	//Verify Sign In with profile name (VSCO X)
 	@Test (priority = 2)
 	public static void SignInProfileName() throws InterruptedException {
-		SplashScreenPage.TapSignInBtn();
-		SignInPage.InitElements();
-		SignInPage.TapEmailFieldTxt();
-		AbstractTest.TsullivanX();
-		SignInPage.TapPwdTxt();
-		AbstractTest.Password();
-		Thread.sleep(1000);
-		Assert.assertTrue(SignInPage.signInBtn.isEnabled());
-		SignInPage.TapSignInBtn();
-		//ExplorePage.InitElements();
-		Assert.assertTrue(ExplorePage.imageView.isDisplayed());
+		OnboardingTests.SignInProfileName();
 	}
+	
+	//Verify back camera capture
+	@Test (priority = 3)
+	public static void BackCameraCapture() {
+		CameraTests.BackCameraCapture();
+	}
+	
+	//Verify front camera capture
+	@Test (priority = 4)
+	public static void FrontCameraCapture() {
+		CameraTests.FrontCameraCapture();
+	}
+	
+	//Verify Signing out of VSCO
+	@Test (priority = 5)
+	public static void SignOut() {
+		SignOutTests.SignOut();
+	}
+	
+	//Verify settings (Explore)
+	@Test (priority = 6)
+	public static void VerifySettingsSO() {
+		SettingsTests.VerifyUISignedOut();;
+	}
+	
+	//Verify search (Signed out)
+	@Test (priority = 7)
+	public static void VerifySearch() {
+		SearchTests.PeopleImageJournalSearch();
+	}
+	
+	
 	
 	
 
