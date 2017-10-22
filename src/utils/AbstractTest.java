@@ -14,6 +14,7 @@ import pages.SplashScreenPage;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -26,7 +27,7 @@ public static AndroidDriver<MobileElement> driver;
 @BeforeSuite
 public void setup() throws MalformedURLException, InterruptedException {
 	File appDir = new File("src");
-	File app = new File(appDir, "VSCO-35(1324).apk");
+	File app = new File(appDir, "vsco.apk");
 	DesiredCapabilities cap = new DesiredCapabilities();
 	cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
 	cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device");
@@ -48,4 +49,97 @@ PageFactory.initElements(new AppiumFieldDecorator(driver), new SplashScreenPage(
 public void teardown() {
 	driver.quit();
 }
+
+//"tsullivanx' profile name
+public static void TsullivanX() {
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_S);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_U);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_L);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_L);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_I);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_V);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_N);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_X);	
+}
+
+//'visualsupply' password
+public static void Password() {
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_V);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_I);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_S);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_U);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_L);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_S);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_U);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_P);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_P);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_L);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_Y);
+}
+
+//Email for Email Sign Up (need to change every run until better method is implemented)
+public static void Email() {
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_S);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_U);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_L);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_L);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_I);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_V);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_N);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_PLUS);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_U);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_O);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_1);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_2);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_7);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_AT);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_S);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_H);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_S);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_Q);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_PERIOD);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_C);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_O);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_M);
+}
+
+public static void ProfileName() {
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_S);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_U);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_L);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_L);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_I);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_V);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_N);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_U);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_O);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_1);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_2);
+	driver.pressKeyCode(AndroidKeyCode.KEYCODE_7);
+}
+
+	public static void scrollTo(String text) {                
+	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+text+"\").instance(0))");
+	}
+	
+	public static void SearchTerm() {
+		driver.pressKeyCode(AndroidKeyCode.KEYCODE_C);
+		driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
+		driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
+	}
 }

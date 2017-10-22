@@ -10,12 +10,12 @@ import pages.ExplorePage;
 import pages.FacebookAccountKitPage1;
 import pages.NavigationBarPage;
 import pages.SearchPage;
-import pages.SettingsPage;
 import pages.ShopPage;
 import pages.SignInPage;
 import pages.SplashScreenPage;
 import pages.StudioPage;
 import pages.XUpsellPage;
+import pages.Settings.SettingsPage;
 import utils.AbstractTest;
 
 public class VerifyUISignedOut extends AbstractTest {

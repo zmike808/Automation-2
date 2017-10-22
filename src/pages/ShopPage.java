@@ -11,15 +11,15 @@ public class ShopPage extends AbstractPage {
 
 	//Objects
 		//Close button 
-		@FindBy (id="com.vsco.cam:id/store_close_button_wrapper")
+		@FindBy (id="store_close_button_wrapper")
 		public static MobileElement closeBtn;
 		
 		//Preset price tag
-		@FindBy (id="com.vsco.cam:id/store_product_item_status")
+		@FindBy (id="store_product_item_status")
 		public static MobileElement storeProductItem;
 				
 		//Preset image view
-		@FindBy (id="com.vsco.cam:id/store_product_item_image")
+		@FindBy (id="store_product_item_image")
 		public static MobileElement presetImageView;
 				
 		//'Introducing VSCO X' text

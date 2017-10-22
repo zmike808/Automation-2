@@ -23,9 +23,7 @@ public class ExplorePage extends AbstractPage {
 		@FindBy (id="onboarding_card_textview")
 		public static MobileElement fmfCardText;
 		
-		//Image View 
-		@FindBy (id="vsco_image_view_image")
-		public static MobileElement imageView;
+		
 		
 		
 	//Methods
@@ -44,10 +42,7 @@ public class ExplorePage extends AbstractPage {
 			fmfCardText.click();
 		}
 		
-		//Tap image view
-		public static void  TapImageView () {
-			imageView.click();
-		}
+		
 		
 		//Initialize Explore Page Elements
 		public static void InitElements() {
