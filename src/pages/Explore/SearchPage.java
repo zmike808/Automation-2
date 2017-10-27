@@ -1,4 +1,4 @@
-package pages;
+package pages.Explore;
 
 import java.util.List;
 

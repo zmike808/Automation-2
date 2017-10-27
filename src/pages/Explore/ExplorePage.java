@@ -1,4 +1,4 @@
-package pages;
+package pages.Explore;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

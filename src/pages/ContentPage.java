@@ -18,14 +18,35 @@ public class ContentPage extends AbstractPage {
 			public static MobileElement journalTitle;
 			
 			
+		//Journal Subtitle
+			@FindBy (id="article_item_subtitle_textview")
+			public static MobileElement journalSubtitle;
+		
+		//Collection update title
+			@FindBy (id="collection_item_updated_collection_textview")
+			public static MobileElement collectionUpdateTitle;
 			
+			//public static boolean journalIsDisplayed = journalTitle.isDisplayed();
+			
+			
+			
+	//Methods
+			//Tap Journal Title
+			public static void TapJournalTitle() {
+				journalTitle.click();
+			}
 			
 			//Tap image view
 			public static void  TapImageView () {
 				imageView.click();
 			}
 			
-			//Initialize Explore Page Elements
+			//Tap Collection update title
+			public static void TapCollectionTitle() {
+				collectionUpdateTitle.click();
+			}
+			
+			//Initialize Content Page Elements
 			public static void InitElements() {
 				PageFactory.initElements(new AppiumFieldDecorator(driver), new ContentPage());
 			}

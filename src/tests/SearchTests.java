@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
 import pages.ContentPage;
-import pages.ExplorePage;
 import pages.NavigationBarPage;
-import pages.SearchPage;
+import pages.Explore.ExplorePage;
+import pages.Explore.SearchPage;
 import utils.AbstractTest;
 
 public class SearchTests extends AbstractTest {

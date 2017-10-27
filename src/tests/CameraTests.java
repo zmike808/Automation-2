@@ -4,9 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
-import pages.CameraPage;
 import pages.NavigationBarPage;
-import pages.StudioPage;
+import pages.Studio.CameraPage;
+import pages.Studio.StudioPage;
 import utils.AbstractTest;
 
 public class CameraTests extends AbstractTest {

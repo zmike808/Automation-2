@@ -1,6 +1,4 @@
-package pages;
-
-import java.util.List;
+package pages.Studio;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

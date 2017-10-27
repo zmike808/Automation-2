@@ -5,17 +5,18 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidKeyCode;
-import pages.EmailSignUpPage;
-import pages.ExplorePage;
-import pages.FacebookAccountKitPage1;
+import pages.ContentPage;
 import pages.NavigationBarPage;
-import pages.SearchPage;
-import pages.ShopPage;
-import pages.SignInPage;
 import pages.SplashScreenPage;
-import pages.StudioPage;
 import pages.XUpsellPage;
+import pages.Explore.ExplorePage;
+import pages.Explore.SearchPage;
+import pages.Onboarding.EmailSignUpPage;
+import pages.Onboarding.FacebookAccountKitPage1;
+import pages.Onboarding.SignInPage;
 import pages.Settings.SettingsPage;
+import pages.Studio.ShopPage;
+import pages.Studio.StudioPage;
 import utils.AbstractTest;
 
 public class VerifyUISignedOut extends AbstractTest {
@@ -111,7 +112,7 @@ public class VerifyUISignedOut extends AbstractTest {
 		Assert.assertTrue(ExplorePage.searchBtn.isDisplayed());
 		Assert.assertTrue(ExplorePage.settingsBtn.isDisplayed());
 		Assert.assertTrue(ExplorePage.fmfCardText.isDisplayed());
-		Assert.assertTrue(ExplorePage.imageView.isDisplayed());
+		Assert.assertTrue(ContentPage.imageView.isDisplayed());
 	}
 	
 	//Search screen

@@ -4,16 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.ContentPage;
-import pages.EmailSignUpPage;
-import pages.ExplorePage;
 import pages.FindMyFriendsPage;
 import pages.NavigationBarPage;
-import pages.PrivateProfilePage;
-import pages.SignInPage;
 import pages.SplashScreenPage;
-import pages.VerifyEmailPage;
 import pages.XUpsellPage;
-import pages.Settings.SettingsPage;
+import pages.Explore.ExplorePage;
+import pages.Onboarding.EmailSignUpPage;
+import pages.Onboarding.SignInPage;
+import pages.Onboarding.VerifyEmailPage;
 import utils.AbstractTest;
 
 public class OnboardingTests extends AbstractTest {
