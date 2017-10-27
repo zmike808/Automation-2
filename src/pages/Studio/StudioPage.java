@@ -1,4 +1,4 @@
-package pages;
+package pages.Studio;
 
 import java.util.List;
 

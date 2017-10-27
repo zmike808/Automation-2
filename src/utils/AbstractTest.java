@@ -3,16 +3,18 @@ package utils;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import pages.SplashScreenPage;
-
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -41,7 +43,7 @@ public void setup() throws MalformedURLException, InterruptedException {
 } catch (MalformedURLException e) {
 	e.printStackTrace();
 } 
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 PageFactory.initElements(new AppiumFieldDecorator(driver), new SplashScreenPage());
 }
 
@@ -133,13 +135,33 @@ public static void ProfileName() {
 	driver.pressKeyCode(AndroidKeyCode.KEYCODE_7);
 }
 
-	public static void scrollTo(String text) {                
-	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+text+"\").instance(0))");
-	}
+//	public static void scrollToElement(MobileElement text) {  
+//		while (!text.isDisplayed()) {
+//	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().resourceId(\""+text+"\").instance(0))");
+//	} 
+		
 	
 	public static void SearchTerm() {
 		driver.pressKeyCode(AndroidKeyCode.KEYCODE_C);
 		driver.pressKeyCode(AndroidKeyCode.KEYCODE_A);
 		driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
 	}
-}
+	
+	public static void ScrollDown() {
+		//duration between scroll start and scroll stop
+		Duration Duration = java.time.Duration.ofMillis(100);
+		//get window size and coordinates
+		Dimension size = driver.manage().window().getSize();
+		int startx = (int) (size.width * 0.50);
+		int starty = (int) (size.height * 0.50);
+		int endy = (int) (size.height * -0.10);
+		TouchAction touchAction = new TouchAction(driver);;
+		//start scroll
+		touchAction.press(startx, starty).moveTo(0, endy).release().perform();
+		//stop scroll
+		touchAction.waitAction(Duration).press(startx, starty).release().perform();
+		    
+		    
+		}
+	}
+

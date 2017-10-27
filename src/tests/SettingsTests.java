@@ -3,8 +3,8 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.ExplorePage;
 import pages.NavigationBarPage;
+import pages.Explore.ExplorePage;
 import pages.Settings.SettingsPage;
 import utils.AbstractTest;
 
