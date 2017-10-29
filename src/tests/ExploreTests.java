@@ -1,7 +1,5 @@
 package tests;
 
-
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,16 +16,7 @@ public class ExploreTests extends AbstractTest {
 	@Test 
 	public static void ViewJournal() throws InterruptedException {
 		ContentPage.InitElements();
-		for (int i = 1; i <= 10; i++) {
-			try  {
-				ContentPage.TapJournalTitle();
-				System.out.println("Journal found! Tap away!");
-				break;
-			} catch(NoSuchElementException e) {
-				System.out.println("Journal not found, scrolling down");
-			}
-			AbstractTest.ScrollDown();
-		}
+		AbstractTest.ScrollToElement(ContentPage.journalTitle);
 		JournalPage.InitElements();
 		Assert.assertTrue(JournalPage.journalTitle.isDisplayed());
 		JournalPage.TapCloseBtn();
@@ -38,16 +27,7 @@ public class ExploreTests extends AbstractTest {
 	@Test 
 	public static void ViewCollectionUpdate() {
 		ContentPage.InitElements();
-		for (int i = 1; i <= 10; i++) {
-			try  {
-				ContentPage.TapCollectionTitle();
-				System.out.println("Collection update found! Tap away!");
-				break;
-			} catch(NoSuchElementException e) {
-				System.out.println("Collection update not found, scrolling down");
-			}
-			AbstractTest.ScrollDown();
-		}
+		AbstractTest.ScrollToElement(ContentPage.collectionUpdateTitle);
 		UserProfilePage.InitElements();
 		Assert.assertTrue(UserProfilePage.userProfileImage.isDisplayed());
 		UserProfilePage.TapCloseBtn();
@@ -58,16 +38,7 @@ public class ExploreTests extends AbstractTest {
 	@Test
 	public static void ViewImageView() {
 		ContentPage.InitElements();
-		for (int i = 1; i <= 10; i++) {
-			try  {
-				ContentPage.TapImageView();
-				System.out.println("Image view found! Tap away!");
-				break;
-			} catch(NoSuchElementException e) {
-				System.out.println("Image view not found, scrolling down");
-			}
-			AbstractTest.ScrollDown();
-		}
+		AbstractTest.ScrollToElement(ContentPage.imageView);
 		DetailViewPage.InitElements();
 		Assert.assertTrue(DetailViewPage.detailView.isDisplayed());
 		DetailViewPage.TapCloseBtn();
