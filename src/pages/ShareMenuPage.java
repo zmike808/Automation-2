@@ -10,30 +10,30 @@ import utils.AbstractPage;
 public class ShareMenuPage extends AbstractPage {
 	//Objects
 	//Close button
-	@FindBy (id="com.vsco.cam:id/share_menu_back_icon")
+	@FindBy (id="share_menu_back_icon")
 	public static MobileElement closeBtn;
 	
 	//Share button
-	@FindBy (id="com.vsco.cam:id/image_menu_share")
+	@FindBy (id="image_menu_share")
 	public static MobileElement shareBtn;
 	
 	//Report Image button
-	@FindBy (id="com.vsco.cam:id/image_menu_report_image")
+	@FindBy (id="image_menu_report_image")
 	public static MobileElement reportImageBtn;
 		
 	//Share menu - Copy Image URL button
-	@FindBy (id="com.vsco.cam:id/share_menu_copy_image_url")
+	@FindBy (id="share_menu_copy_image_url")
 	public static MobileElement copyImageURLBtn;
 	
 	//Share menu - Email button
-	@FindBy (id="com.vsco.cam:id/share_menu_email")
+	@FindBy (id="share_menu_email")
 	public static MobileElement emailBtn;
 	
 	//Share menu - More button
-	@FindBy (id="com.vsco.cam:id/share_menu_more")
+	@FindBy (id="share_menu_more")
 	public static MobileElement moreBtn;
 	
-	@FindBy (id="com.vsco.cam:id/share_menu_copy_image_url")
+	@FindBy (id="share_menu_copy_image_url")
 	public static MobileElement copyImageURL;
 	
 	//Methods 
