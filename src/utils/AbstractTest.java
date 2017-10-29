@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterSuite;
@@ -160,8 +161,19 @@ public static void ProfileName() {
 		touchAction.press(startx, starty).moveTo(0, endy).release().perform();
 		//stop scroll
 		touchAction.waitAction(Duration).press(startx, starty).release().perform();
-		    
-		    
 		}
+	
+	public static void ScrollDownToElement(MobileElement element) {
+		for (int i = 1; i <= 10; i++) {
+			try  {
+				element.click();
+				System.out.println(element + " found! Tap away!");
+				break;
+			} catch(NoSuchElementException e) {
+				System.out.println(element + " not found, scrolling down");
+			}
+			AbstractTest.ScrollDown();
+		}
+	}
 	}
 
