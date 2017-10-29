@@ -21,7 +21,7 @@ public class SearchPage extends AbstractPage {
 		public static MobileElement searchField;
 		
 		//header_center_layout list
-		@FindBy (id="com.vsco.cam:id/header_center_layout")
+		@FindBy (id="header_center_layout")
 		public static List <MobileElement> headerCenterList;
 		
 		//People tab

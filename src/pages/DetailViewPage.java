@@ -11,43 +11,43 @@ public class DetailViewPage extends AbstractPage {
 	
 	//Objects
 	//Detail View container
-	@FindBy (id="com.vsco.cam:id/detail")
+	@FindBy (id="detail")
 	public static MobileElement detailView;
 	
 	//Close button
-	@FindBy (id="com.vsco.cam:id/x_button")
+	@FindBy (id="x_button")
 	public static MobileElement closeBtn;
 	
 	//More button
-	@FindBy (id="com.vsco.cam:id/options_button")
+	@FindBy (id="options_button")
 	public static MobileElement moreBtn;
 	
 	//Image View
-	@FindBy (id="com.vsco.cam:id/vsco_image_view_image")
+	@FindBy (id="vsco_image_view_image")
 	public static MobileElement imageView;
 
 	//Favorite button
-	@FindBy (id="com.vsco.cam:id/detail_view_favorite_button")
+	@FindBy (id="detail_view_favorite_button")
 	public static MobileElement favoriteBtn;
 	
 	//Republish button
-	@FindBy (id="com.vsco.cam:id/detail_view_republish_button")
+	@FindBy (id="detail_view_republish_button")
 	public static MobileElement republishBtn;
 	
 	//Username
-	@FindBy (id="com.vsco.cam:id/grid_name")
+	@FindBy (id="grid_name")
 	public static MobileElement username;
 	
 	//Description
-	@FindBy (id="com.vsco.cam:id/description")
+	@FindBy (id="description")
 	public static MobileElement description;
 	
 	//Capture date
-	@FindBy (id="com.vsco.cam:id/date")
+	@FindBy (id="date")
 	public static MobileElement captureDate;
 	
 	//Applied preset
-	@FindBy (id="com.vsco.cam:id/filter")
+	@FindBy (id="filter")
 	public static MobileElement appliedPreset;
 	
 	
