@@ -16,7 +16,7 @@ public class ExploreTests extends AbstractTest {
 	@Test 
 	public static void ViewJournal() throws InterruptedException {
 		ContentPage.InitElements();
-		AbstractTest.ScrollToElement(ContentPage.journalTitle);
+		AbstractTest.ScrollDownToElement(ContentPage.journalTitle);
 		JournalPage.InitElements();
 		Assert.assertTrue(JournalPage.journalTitle.isDisplayed());
 		JournalPage.TapCloseBtn();
@@ -27,7 +27,7 @@ public class ExploreTests extends AbstractTest {
 	@Test 
 	public static void ViewCollectionUpdate() {
 		ContentPage.InitElements();
-		AbstractTest.ScrollToElement(ContentPage.collectionUpdateTitle);
+		AbstractTest.ScrollDownToElement(ContentPage.collectionUpdateTitle);
 		UserProfilePage.InitElements();
 		Assert.assertTrue(UserProfilePage.userProfileImage.isDisplayed());
 		UserProfilePage.TapCloseBtn();
@@ -38,7 +38,7 @@ public class ExploreTests extends AbstractTest {
 	@Test
 	public static void ViewImageView() {
 		ContentPage.InitElements();
-		AbstractTest.ScrollToElement(ContentPage.imageView);
+		AbstractTest.ScrollDownToElement(ContentPage.imageView);
 		DetailViewPage.InitElements();
 		Assert.assertTrue(DetailViewPage.detailView.isDisplayed());
 		DetailViewPage.TapCloseBtn();
