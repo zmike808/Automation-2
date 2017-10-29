@@ -134,13 +134,6 @@ public class AbstractTest {
     driver.pressKeyCode(AndroidKeyCode.KEYCODE_7);
   }
 
-  // public static void scrollToElement(MobileElement text) {
-  // while (!text.isDisplayed()) {
-  // driver.findElementByAndroidUIAutomator("new UiScrollable(new
-  // UiSelector().scrollable(true).instance(0)).scrollIntoView(new
-  // UiSelector().resourceId(\""+text+"\").instance(0))");
-  // }
-
   // "Cat" search term
   public static void SearchTerm() {
     driver.pressKeyCode(AndroidKeyCode.KEYCODE_C);
