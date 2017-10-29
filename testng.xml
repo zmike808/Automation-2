@@ -13,6 +13,7 @@
 					<include name="ViewImageView" />
 					<include name="ViewJournal" />
 					<include name="ViewCollectionUpdate" />
+					<include name="FavoriteImage" />
 				</methods>
 			</class>
 			<class name="tests.CameraTests">
