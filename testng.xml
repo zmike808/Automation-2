@@ -11,10 +11,15 @@
 			<class name="tests.ExploreTests" >
 				<methods>
 					<include name="ViewImageView" />
-					<include name="ViewJournal" />
-					<include name="ViewCollectionUpdate" />
 					<include name="FavoriteImage" />
 					<include name="RepublishImage" />
+					<include name="ViewCollectionUpdate" />
+					<include name="ViewJournal" />
+				</methods>
+			</class>
+			<class name="tests.ImportTests" >
+				<methods>
+					<include name="ImportImage" />
 				</methods>
 			</class>
 			<class name="tests.CameraTests">

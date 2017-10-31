@@ -14,6 +14,7 @@ public class SettingsTests extends AbstractTest {
   public static void VerifyUISignedOut() {
     NavigationBarPage.InitElements();
     NavigationBarPage.TapExploreNavBtn();
+    ExplorePage.InitElements();
     ExplorePage.TapSettingsBtn();
     // SettingsPage.InitElements();
     Assert.assertTrue(SettingsPage.closeBtn.isDisplayed());
