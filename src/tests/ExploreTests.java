@@ -49,14 +49,16 @@ public class ExploreTests extends AbstractTest {
   }
 
   // Verify favoriting an image
-  @Test
+  @Test(enabled = false)
   public static void FavoriteImage() {
+    NavigationBarPage.InitElements();
+    NavigationBarPage.TapExploreNavBtn();
     ContentPage.InitElements();
     AbstractTest.ScrollDownToElement(ContentPage.imageView);
     DetailViewPage.InitElements();
     String expectedResult = DetailViewPage.username.getText();
     DetailViewPage.TapFavoriteBtn();
-    DetailViewPage.dialogAcceptBtn.click();
+    AbstractTest.AcceptDialog(DetailViewPage.dialogAcceptBtn);
     DetailViewPage.TapCloseBtn();
     NavigationBarPage.InitElements();
     NavigationBarPage.TapProfileNavBtn();
@@ -73,12 +75,14 @@ public class ExploreTests extends AbstractTest {
   // Verify republishing an image
   @Test(enabled = false)
   public static void RepublishImage() {
+    NavigationBarPage.InitElements();
+    NavigationBarPage.TapExploreNavBtn();
     ContentPage.InitElements();
     AbstractTest.ScrollDownToElement(ContentPage.imageView);
     DetailViewPage.InitElements();
     String expectedResult = DetailViewPage.username.getText();
     DetailViewPage.TapRepublishBtn();
-    DetailViewPage.dialogAcceptBtn.click();
+    AbstractTest.AcceptDialog(DetailViewPage.dialogAcceptBtn);
     DetailViewPage.TapCloseBtn();
     NavigationBarPage.InitElements();
     NavigationBarPage.TapProfileNavBtn();

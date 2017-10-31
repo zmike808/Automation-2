@@ -141,6 +141,7 @@ public class AbstractTest {
     driver.pressKeyCode(AndroidKeyCode.KEYCODE_T);
   }
 
+  // Scroll down
   public static void ScrollDown() {
     // duration between scroll start and scroll stop
     Duration Duration = java.time.Duration.ofMillis(100);
@@ -156,8 +157,9 @@ public class AbstractTest {
     touchAction.waitAction(Duration).press(startx, starty).release().perform();
   }
 
+  // Scroll down to element
   public static void ScrollDownToElement(MobileElement element) {
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 15; i++) {
       try {
         element.click();
         System.out.println(element + " found! Tap away!");
@@ -167,6 +169,21 @@ public class AbstractTest {
       }
       AbstractTest.ScrollDown();
     }
+  }
+
+  // Accept dialog
+  @SuppressWarnings("unused")
+  public static void AcceptDialog(MobileElement element) {
+    for (int i = 1; i <= 10; i++) {
+      try {
+        element.click();
+        break;
+      } catch (NoSuchElementException e) {
+        break;
+      }
+
+    }
+
   }
 }
 
