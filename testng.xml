@@ -14,6 +14,7 @@
 					<include name="ViewJournal" />
 					<include name="ViewCollectionUpdate" />
 					<include name="FavoriteImage" />
+					<include name="RepublishImage" />
 				</methods>
 			</class>
 			<class name="tests.CameraTests">

@@ -1,5 +1,6 @@
 package pages;
 
+import java.util.List;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import io.appium.java_client.MobileElement;
@@ -56,6 +57,10 @@ public class PrivateProfilePage extends AbstractPage {
   // Profile Picture
   @FindBy(id = "circle_crop")
   public static MobileElement profilePicture;
+
+  // Collection tab - username list
+  @FindBy(id = "com.vsco.cam:id/grid_item_username_textview")
+  public static List<MobileElement> collectionUsernameList;
 
   // Methods
   // Init elements

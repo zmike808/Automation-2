@@ -49,14 +49,14 @@ public class ExploreTests extends AbstractTest {
   }
 
   // Verify favoriting an image
-  @Test(enabled = true)
+  @Test
   public static void FavoriteImage() {
     ContentPage.InitElements();
     AbstractTest.ScrollDownToElement(ContentPage.imageView);
     DetailViewPage.InitElements();
     String expectedResult = DetailViewPage.username.getText();
     DetailViewPage.TapFavoriteBtn();
-    DetailViewPage.favoriteDialogAcceptBtn.click();
+    DetailViewPage.dialogAcceptBtn.click();
     DetailViewPage.TapCloseBtn();
     NavigationBarPage.InitElements();
     NavigationBarPage.TapProfileNavBtn();
@@ -67,6 +67,27 @@ public class ExploreTests extends AbstractTest {
     String actualResult = username.getText();
     Assert.assertEquals(actualResult, expectedResult);
     FavoritesPage.TapCloseBtn();
+    NavigationBarPage.TapExploreNavBtn();
+  }
+
+  // Verify republishing an image
+  @Test(enabled = false)
+  public static void RepublishImage() {
+    ContentPage.InitElements();
+    AbstractTest.ScrollDownToElement(ContentPage.imageView);
+    DetailViewPage.InitElements();
+    String expectedResult = DetailViewPage.username.getText();
+    DetailViewPage.TapRepublishBtn();
+    DetailViewPage.dialogAcceptBtn.click();
+    DetailViewPage.TapCloseBtn();
+    NavigationBarPage.InitElements();
+    NavigationBarPage.TapProfileNavBtn();
+    PrivateProfilePage.InitElements();
+    PrivateProfilePage.TapCollectionTab();
+    MobileElement username = PrivateProfilePage.collectionUsernameList.get(0);
+    String actualResult = username.getText();
+    Assert.assertEquals(actualResult, expectedResult);
+    NavigationBarPage.TapExploreNavBtn();
   }
 
 }

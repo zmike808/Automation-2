@@ -53,13 +53,13 @@ public class DetailViewPage extends AbstractPage {
   @FindBy(id = "com.vsco.cam:id/dialog_text")
   public static MobileElement favoriteDialogText;
 
-  // Favorite this image? modal - deny button
+  // modal - deny button
   @FindBy(id = "com.vsco.cam:id/dialog_cancel")
-  public static MobileElement favoriteDialogCancelBtn;
+  public static MobileElement dialogCancelBtn;
 
-  // Favorite this image? modal - accept button
+  // modal - accept button
   @FindBy(id = "com.vsco.cam:id/dialog_accept")
-  public static MobileElement favoriteDialogAcceptBtn;
+  public static MobileElement dialogAcceptBtn;
 
 
 
