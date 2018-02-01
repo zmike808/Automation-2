@@ -59,7 +59,7 @@ public class PrivateProfilePage extends AbstractPage {
   public static MobileElement profilePicture;
 
   // Collection tab - username list
-  @FindBy(id = "com.vsco.cam:id/grid_item_username_textview")
+  @FindBy(id = "grid_item_username_textview")
   public static List<MobileElement> collectionUsernameList;
 
   // Methods

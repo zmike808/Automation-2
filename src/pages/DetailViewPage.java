@@ -50,15 +50,15 @@ public class DetailViewPage extends AbstractPage {
   public static MobileElement appliedPreset;
 
   // Favorite this image? modal
-  @FindBy(id = "com.vsco.cam:id/dialog_text")
+  @FindBy(id = "dialog_text")
   public static MobileElement favoriteDialogText;
 
   // modal - deny button
-  @FindBy(id = "com.vsco.cam:id/dialog_cancel")
+  @FindBy(id = "dialog_cancel")
   public static MobileElement dialogCancelBtn;
 
   // modal - accept button
-  @FindBy(id = "com.vsco.cam:id/dialog_accept")
+  @FindBy(id = "dialog_accept")
   public static MobileElement dialogAcceptBtn;
 
 
