@@ -11,15 +11,15 @@ public class ImportPage extends AbstractPage {
 
   // Objects
   // Close button
-  @FindBy(id = "com.vsco.cam:id/header_left_button")
+  @FindBy(id = "header_left_button")
   public static MobileElement closeBtn;
 
   // "Photo Gallery" import header text
-  @FindBy(id = "com.vsco.cam:id/saved_photos_header_text")
+  @FindBy(id = "saved_photos_header_text")
   public static MobileElement header;
 
   // Accept button
-  @FindBy(id = "com.vsco.cam:id/header_right_button")
+  @FindBy(id = "header_right_button")
   public static MobileElement acceptBtn;
 
   // "Images" tab
@@ -39,7 +39,7 @@ public class ImportPage extends AbstractPage {
   public static MobileElement albumDownload;
 
   // Photo list
-  @FindBy(id = "com.vsco.cam:id/import_photo_view")
+  @FindBy(id = "import_photo_view")
   public static List<MobileElement> photoList;
 
 

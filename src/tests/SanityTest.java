@@ -7,10 +7,10 @@ import utils.AbstractTest;
 public class SanityTest extends AbstractTest {
 
   // Verify Email Sign Up
-  @Test(priority = 0, enabled = false)
-  public static void EmailSignUpFreshInstall() throws InterruptedException {
-    OnboardingTests.EmailSignUpFreshInstall();
-  }
+//  @Test(priority = 0, enabled = false)
+//  public static void EmailSignUpFreshInstall() throws InterruptedException {
+//    OnboardingTests.EmailSignUpFreshInstall();
+//  }
 
   // Verify Signing out of VSCO
   // @Test (priority = 1, enabled = false)

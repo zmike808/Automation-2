@@ -10,13 +10,13 @@ import utils.AbstractPage;
 public class FavoritesPage extends AbstractPage {
   // Objects
   // Favorites header text
-  @FindBy(id = "com.vsco.cam:id/saved_photos_header_text")
+  @FindBy(id = "saved_photos_header_text")
   public static MobileElement headerText;
 
-  @FindBy(id = "com.vsco.cam:id/user_name")
+  @FindBy(id = "user_name")
   public static List<MobileElement> usernameList;
 
-  @FindBy(id = "com.vsco.cam:id/header_left_button")
+  @FindBy(id = "header_left_button")
   public static MobileElement closeBtn;
   //
   // @FindBy (id = "")
